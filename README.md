@@ -12,7 +12,11 @@ This script will read customers.csv and transactions.csv files into a Pandas dat
 
 ### Assumptions
 
-I assumed the data points needed to satisfy the basic requirements of the assignment.
+I created the data for customers and transactions needed to satify the basic requirements of the assignment.
+
+### Design Diagram
+![ETL Design Diagram](task1_etl_pipeline_design.png)
+
 
 ### Setup & Usage
 
@@ -70,7 +74,17 @@ days_since_signup INTEGER
 
 I decided to create ```customers_raw``` and ```transactions_raw``` tables that are loaded from the csv files respectively. These serve to load the 'snapshot' data to the ```dim_customer``` and ```fact_transaction``` tables, on which the analytical queries will be ran on.
 
-### Schema Setup
+
+### Data Load and Schema Setup
+![Data Load Design](task2_data_load_design.png)
+
+### Data Model
+![Data Model](task2_data_model.png)
+
+### Running SQL files on the Database
+
+Connect to Database: ```sqlite3 VirinderpalSinghBatth_DE_Assessment.db```
+Run Query File: ```.read task2_queries.sql```
 
 ### Create Table: customers_raw
 
